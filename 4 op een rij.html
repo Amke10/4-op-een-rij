@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<script>
+    var stoneLinks = 0;
+    var stoneMidden =0;
+    var stoneRechts= 0;
+  function hokRoodLinks() {
+      if (stoneLinks < 3){
+        document.getElementById('hok' + (stoneLinks +1) + 'kol1').style.backgroundColor = 'red';
+        stoneLinks = stoneLinks+1;
+        console.log(stoneLinks);
+      }
+  }
+  function hokRoodMidden() {
+    if (stoneMidden < 3){
+        document.getElementById('hok' + (stoneMidden +1) + 'kol2').style.backgroundColor = 'red';
+        stoneMidden = stoneMidden+1;
+        console.log(stoneMidden);
+  }
+}
+  function hokRoodRechts() {
+    if (stoneRechts < 3){
+        document.getElementById('hok' + (stoneRechts +1) + 'kol3').style.backgroundColor = 'red';
+        stoneRechts = stoneRechts+1;
+        console.log(stoneRechts);
+  }
+}
+</script>
+<style>
+  table {
+    width: 50%;
+  }
+  td {
+    border: 3px solid blue;
+    width: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+</style>
+<table>
+  <tr>
+    <td id="hok3kol1" onclick="hokRoodLinks()">hallo</td>
+    <td id="hok3kol2" onclick="hokRoodMidden()">hallo</td>
+    <td id="hok3kol3" onclick="hokRoodRechts()">hallo</td>
+  </tr>
+  <tr>
+    <td id="hok2kol1" onclick="hokRoodLinks()">hallo</td>
+    <td id="hok2kol2" onclick="hokRoodMidden()">hallo</td>
+    <td id="hok2kol3" onclick="hokRoodRechts()">hallo</td>
+  </tr>
+  <tr>
+    <td id="hok1kol1" onclick="hokRoodLinks()">hallo</td>
+    <td id="hok1kol2" onclick="hokRoodMidden()">hallo</td>
+    <td id="hok1kol3" onclick="hokRoodRechts()">hallo</td>
+  </tr>
+</table>
